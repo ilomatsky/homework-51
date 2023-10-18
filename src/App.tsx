@@ -28,18 +28,6 @@ function App() {
         ])
     };
 
-    // const [people, setPeople] = useState([
-    //     {name: 'Jane', age: 20, hobby: 'Video games'},
-    //     {name: 'John', age: 30, hobby: 'Knitting'},
-    // ]);
-    //
-    // const changeName = () => {
-    //     setPeople([
-    //         {name: 'Jane Block', age: 20, hobby: 'Video games'},
-    //         {name: 'John Doe', age: 30, hobby: 'Knitting'},
-    //     ])
-    // };
-
     return (
         <>
             <button onClick={changeNum}>New numbers</button>
