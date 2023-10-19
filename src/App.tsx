@@ -1,8 +1,9 @@
-import './App.css'
+import './App.css';
 import Circle from "./Circles/Circle.tsx";
 import {useState} from "react";
 
 function App() {
+    const numberComponents = 5;
     const [number, setNumber] = useState([
         {number: 5},
         {number: 11},
@@ -12,12 +13,17 @@ function App() {
     ])
     const changeNum = () => {
         const numArray: number[] = [];
-        for (let i = 0; i < 5; i++) {
+
+        for (let i = 0; i < numberComponents; i++) {
             const num: number = (Math.ceil(Math.random() * 36));
-            numArray.push(num);
+
+            if (numArray.includes(num)) {
+                i--;
+            } else {
+                numArray.push(num);
+            }
         }
         numArray.sort((a, b) => a - b);
-        console.log(numArray);
 
         setNumber([
             {number: numArray[0]},
